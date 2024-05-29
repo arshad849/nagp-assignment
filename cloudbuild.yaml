@@ -1,7 +1,7 @@
 steps:
   # Step 1: Check out the code
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', 'https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git', '.']
+  #- name: 'gcr.io/cloud-builders/git'
+  #  args: ['clone', 'https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git', '.']
 
   # Step 2: Set up JDK (since Maven requires JDK)
   - name: 'gcr.io/cloud-builders/gcloud'
