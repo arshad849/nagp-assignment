@@ -22,7 +22,7 @@ public class RecordController {
   @GetMapping("/greetings")
   public String greetings() {
     log.info("Request Received for greetings");
-    return "Application is up";
+    return "Application is up v2";
   }
 
   @PostMapping("/fibonacci")
