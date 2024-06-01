@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: load-generator
+spec:
+  template:
+    spec:
+      containers:
+      - name: load-generator
+        image: appropriate/curl
+        command: ["sh", "-c", "while true; do curl -s http://104.198.146.79:80/records; done"]
+      restartPolicy: Never
+  backoffLimit: 4
