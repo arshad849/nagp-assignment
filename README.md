@@ -27,6 +27,12 @@ This project demonstrates deploying a Spring Boot application with a MySQL datab
 * Cloud Build : Builds the code and push the image to google cloud registry.
 * Kubernetes : service is deployed on kubernetes.
 
+## Assumption and changes from Assignment
+1. Reduced the replica to 1 instead of 3 due to exceeded quota in free tier gcp account.
+2. If load exceeds the threshold 2 additional pods will be created.
+3. Used dynamic provisioning of pv. Dynamic provisioning with statefulset is standard approach.
+4. A rolling update is demonstrated at the end, after deleting the HPA and deployment to stabilize the quota limits.
+
 
 ## Setup
 
@@ -71,13 +77,6 @@ This project demonstrates deploying a Spring Boot application with a MySQL datab
 
   ```bash
   kubectl delete job load-generator
-   
-# Assumption and changes from Assignment
-1. Reduced the replica to 1 instead of 3 due to exceeded quota in free tier gcp account.
-2. If load exceeds the threshold 2 additional pods will be created.
-3. Used dynamic provisioning of pv. Dynamic provisioning with statefulset is standard approach.
-4. A rolling update is demonstrated at the end, after deleting the HPA and deployment to stabilize the quota limits.
-
 
    
 
