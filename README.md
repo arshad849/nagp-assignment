@@ -23,9 +23,9 @@ This project demonstrates deploying a Spring Boot application with a MySQL datab
 - gcloud command-line tool
 
 ## Infrastructure
-Git : https://github.com/arshad849/nagp-assignment
-Cloud Build : Builds the code and push the image to google cloud registry.
-Kubernetes : service is deployed on kubernetes.
+* Git : https://github.com/arshad849/nagp-assignment
+* Cloud Build : Builds the code and push the image to google cloud registry.
+* Kubernetes : service is deployed on kubernetes.
 
 
 ## Setup
