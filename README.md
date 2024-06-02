@@ -7,6 +7,19 @@ Note:
 2. Please consider the quota issue with the free tier account, which requires me to follow a few extra steps.
 3. This has made the demo longer.
 
+# Dockerhub URL
+
+# API URL 
+## to create a record
+Post : http://<host>:80/records
+Body : 
+{
+"id": 4,
+"data": "sample data 4"
+}
+
+GET : http://<host>:80/records
+
 # Spring Boot Application Deployment with Kubernetes and Google Cloud
 
 ## Overview
