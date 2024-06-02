@@ -22,6 +22,7 @@ steps:
     args: ['push', 'arshad849/nagp-assignment/myapp:latest']
 
 images:
-  - 'gcr.io/$PROJECT_ID/my-app'
+  #- 'gcr.io/$PROJECT_ID/my-app'
+  - 'arshad849/nagp-assignment/myapp'
 
 logsBucket: "gs://cloudbuild-logs-bucket-arshad"
