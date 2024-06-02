@@ -19,10 +19,10 @@ steps:
   # Step 5: Push the Docker image to Google Container Registry (GCR)
   - name: 'gcr.io/cloud-builders/docker'
     #args: ['push', 'gcr.io/$PROJECT_ID/my-app']
-    args: ['push', 'arshad849/nagp-assignment/myapp:latest']
+    args: ['push', 'docker.io/arshad849/nagp-assignment/myapp']
 
 images:
   #- 'gcr.io/$PROJECT_ID/my-app'
-  - 'arshad849/nagp-assignment/myapp'
+  - 'docker.io/arshad849/nagp-assignment/myapp'
 
 logsBucket: "gs://cloudbuild-logs-bucket-arshad"
