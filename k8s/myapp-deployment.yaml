@@ -19,7 +19,8 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: gcr.io/nagp-assignment-kubernetes/my-app:v12
+          #image: gcr.io/nagp-assignment-kubernetes/my-app:v12
+          image: arshad849/nagp-assignment/my-app:v12
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
