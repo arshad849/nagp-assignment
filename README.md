@@ -8,6 +8,7 @@ Note:
 3. This has made the demo longer.
 
 # Dockerhub URL
+https://hub.docker.com/repository/docker/arshad849/nagp-assignment
 
 # API URL 
 ## to create a record
@@ -45,6 +46,7 @@ This project demonstrates deploying a Spring Boot application with a MySQL datab
 2. If load exceeds the threshold 2 additional pods will be created.
 3. Used dynamic provisioning of pv. Dynamic provisioning with statefulset is standard approach.
 4. A rolling update is demonstrated at the end, after deleting the HPA and deployment to stabilize the quota limits.
+5. I have not realised and used gcr.io in demo. I have uploaded an image to docker hub as well and added the url.
 
 
 ## Setup
