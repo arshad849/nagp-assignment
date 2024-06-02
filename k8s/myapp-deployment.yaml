@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: myapp
 spec:
-  replicas: 3
+  #replicas: 3
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -20,7 +20,7 @@ spec:
       containers:
         - name: myapp
           #image: gcr.io/nagp-assignment-kubernetes/my-app:v12
-          image: arshad849/nagp-assignment/my-app:v12
+          image: docker.io/arshad849/nagp-assignment:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

@@ -14,16 +14,16 @@ steps:
 
   # Step 4: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    #args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-app', '.']
-    args: ['build', '-t', 'docker.io/arshad849/nagp-assignment:my-app', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-app', '.']
+    #args: ['build', '-t', 'docker.io/arshad849/nagp-assignment:my-app', '.']
 
   # Step 5: Push the Docker image to Google Container Registry (GCR)
   - name: 'gcr.io/cloud-builders/docker'
-    #args: ['push', 'gcr.io/$PROJECT_ID/my-app']
-    args: ['push', 'docker.io/arshad849/nagp-assignment:myapp']
+    args: ['push', 'gcr.io/$PROJECT_ID/my-app']
+    #args: ['push', 'docker.io/arshad849/nagp-assignment:myapp']
 
 images:
-  #- 'gcr.io/$PROJECT_ID/my-app'
-  - 'docker.io/arshad849/nagp-assignment:myapp'
+  - 'gcr.io/$PROJECT_ID/my-app'
+  #- 'docker.io/arshad849/nagp-assignment:myapp'
 
 logsBucket: "gs://cloudbuild-logs-bucket-arshad"
