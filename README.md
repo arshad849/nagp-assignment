@@ -12,14 +12,14 @@ https://hub.docker.com/repository/docker/arshad849/nagp-assignment
 
 # API URL 
 ## to create a record
-Post : http://<host>:80/records
+Post : http://104.198.146.79:80/records
 Body : 
 {
 "id": 4,
 "data": "sample data 4"
 }
 
-GET : http://<host>:80/records
+GET : http://104.198.146.79:80/records
 
 # Spring Boot Application Deployment with Kubernetes and Google Cloud
 
