@@ -1,26 +1,3 @@
-# Recording Details and URL.
-
-https://nagarro-my.sharepoint.com/personal/arshad_patel_nagarro_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Farshad_patel_nagarro_com%2FDocuments%2FArshadPatel_3210467_Kubernetes%20and%20DevOps%20Advanced&view=0
-
-Note:
-1. Skip the video from 33:50 to 36:00. During this period, I was waiting for the quota limit to stabilize.
-2. Please consider the quota issue with the free tier account, which requires me to follow a few extra steps.
-3. This has made the demo longer.
-
-# Dockerhub URL
-https://hub.docker.com/repository/docker/arshad849/nagp-assignment
-
-# API URL 
-## to create a record
-Post : http://104.198.146.79:80/records
-Body : 
-{
-"id": 4,
-"data": "sample data 4"
-}
-
-GET : http://104.198.146.79:80/records
-
 # Spring Boot Application Deployment with Kubernetes and Google Cloud
 
 ## Overview
@@ -41,13 +18,45 @@ This project demonstrates deploying a Spring Boot application with a MySQL datab
 * Cloud Build : Builds the code and push the image to google cloud registry.
 * Kubernetes : service is deployed on kubernetes.
 
+# Recording Details and URL.
+
+https://nagarro-my.sharepoint.com/personal/arshad_patel_nagarro_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Farshad_patel_nagarro_com%2FDocuments%2FArshadPatel_3210467_Kubernetes%20and%20DevOps%20Advanced&view=0
+
+Note:
+1. Skip the video from 33:50 to 36:00. During this period, I was waiting for the quota limit to stabilize.
+2. Please consider the quota issue with the free tier account, which requires me to follow a few extra steps.
+3. This has made the demo longer.
+
+# Dockerhub URL
+https://hub.docker.com/repository/docker/arshad849/nagp-assignment
+
+# Steps to build and push the image to docker hub
+1. Navigate to project directory.
+2. build image
+   ```bash
+   docker build -t arshad849/nagp-assignment:latest
+   
+3. push image to docker hub.
+   ```bash
+   docker push arshad849/nagp-assignment:latest
+
+# API URL 
+## to create a record
+Post : http://104.198.146.79:80/records
+Body : 
+{
+"id": 4,
+"data": "sample data 4"
+}
+
+GET : http://104.198.146.79:80/records
+
 ## Assumption and changes from Assignment
 1. Reduced the replica to 1 instead of 3 due to exceeded quota in free tier gcp account.
 2. If load exceeds the threshold 2 additional pods will be created.
 3. Used dynamic provisioning of pv. Dynamic provisioning with statefulset is standard approach.
 4. A rolling update is demonstrated at the end, after deleting the HPA and deployment to stabilize the quota limits.
 5. I have not realised and used gcr.io in demo. I have uploaded an image to docker hub as well and added the url.
-
 
 ## Setup
 
@@ -92,7 +101,4 @@ This project demonstrates deploying a Spring Boot application with a MySQL datab
 
   ```bash
   kubectl delete job load-generator
-
-   
-
 
